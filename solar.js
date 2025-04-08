@@ -192,7 +192,7 @@ let solar = {
                   `Final estimated bill for ${month}: ₱${roundOff(totalbill)}\n` +
                   `Total Monthly Savings: ₱${roundOff(monthlysavings)}\n\n` +
                   `Counter will now reset after reloading the page.`);
-          }
+          
         }
         document.querySelector(".bill").innerText = `₱ ${roundOff(totalbill)}`;
         document.querySelector(".meralco").innerText = `Meralco Bill\nfor ${month}`;
