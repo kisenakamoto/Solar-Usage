@@ -161,8 +161,9 @@ let solar = {
         }
 
         //Update the variable values every 8th
-        if (day == 8 && time > 11 && billupdated == false) {
-          if (totalbill < 0){
+        if (day == 8 && time > 10 && billupdated == false) {
+          //uncomment if solar limiter is fixed
+/*          if (totalbill < 0){
             const requestData = JSON.stringify({
               billupdated: true,
               importprev: consumeenergy,
@@ -179,7 +180,7 @@ let solar = {
           } 
 
           else {
-            const requestData = JSON.stringify({
+ */           const requestData = JSON.stringify({
               billupdated: true,
               importprev: consumeenergy,
               exportprev: feedinenergy,
