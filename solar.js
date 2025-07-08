@@ -150,8 +150,7 @@ let solar = {
         }
 
         //Change billupdated value every 9th
-        if (day >= 10 && billupdated == true) {
-          //change 10 to 9
+        if (day >= 9 && billupdated == true) {
           const requestData = JSON.stringify({ billupdated: false });
           this.updateBin(requestData);
           alert(`Bill updated: False`);
@@ -162,8 +161,7 @@ let solar = {
         }
 
         //Update the variable values every 8th
-        if (day == 9 && time > 1 && billupdated == false) {
-          //change here
+        if (day == 8 && time > 10 && billupdated == false)
           if (totalbill < 0){
             const requestData = JSON.stringify({
               billupdated: true,
