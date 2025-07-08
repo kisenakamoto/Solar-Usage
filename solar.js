@@ -150,7 +150,8 @@ let solar = {
         }
 
         //Change billupdated value every 9th
-        if (day >= 9 && billupdated == true) {
+        if (day >= 10 && billupdated == true) {
+          //change 10 to 9
           const requestData = JSON.stringify({ billupdated: false });
           this.updateBin(requestData);
           alert(`Bill updated: False`);
