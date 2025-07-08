@@ -161,25 +161,25 @@ let solar = {
         }
 
         //Update the variable values every 8th
-        if (day == 8 && time > 10 && billupdated == false) {
-          //uncomment if solar limiter is fixed
-        /*  if (totalbill < 0){
+        if (day == 9 && time > 1 && billupdated == false) {
+          //change here
+          if (totalbill < 0){
             const requestData = JSON.stringify({
               billupdated: true,
               importprev: consumeenergy,
               exportprev: feedinenergy,
               yieldprev: yieldtotal,
               savingsprev: savingsprev + monthlysavings,
-              billprev: roundOff(totalbill),
+             // billprev: roundOff(totalbill), //uncomment if limiter fixed
             });
             this.updateBin(requestData);
             alert(`Monthly update every 8th has been successful!\n\n` +
                   `Final estimated bill for ${month}: ₱${roundOff(totalbill)}\n` +
                   `Total Monthly Savings: ₱${roundOff(monthlysavings)}\n\n` +
                   `Counter will now reset after reloading the page.`);
-          } */
+          } 
 
-        //  else {
+          else {
             const requestData = JSON.stringify({
               billupdated: true,
               importprev: consumeenergy,
@@ -192,7 +192,7 @@ let solar = {
                   `Final estimated bill for ${month}: ₱${roundOff(totalbill)}\n` +
                   `Total Monthly Savings: ₱${roundOff(monthlysavings)}\n\n` +
                   `Counter will now reset after reloading the page.`);
-        //    }
+            }
         }
         document.querySelector(".bill").innerText = `₱ ${roundOff(totalbill)}`;
         document.querySelector(".meralco").innerText = `Meralco Bill\nfor ${month}`;
