@@ -161,7 +161,7 @@ let solar = {
         }
 
         //Update the variable values every 8th
-        if (day == 8 && time > 10 && billupdated == false)
+        if (day == 8 && time > 10 && billupdated == false) {
           if (totalbill < 0){
             const requestData = JSON.stringify({
               billupdated: true,
